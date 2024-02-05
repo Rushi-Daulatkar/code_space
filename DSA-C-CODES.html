@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSA-C-CODES</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .code-container {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+            text-align: left;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .code-container h2 {
+            font-size: 18px; /* Adjust the font size */
+            color: #333; /* Adjust the text color */
+            margin-bottom: 10px; /* Add margin at the bottom for spacing */
+            word-wrap: break-word; /* Allow long words to break onto the next line */
+        }
+        .copy-button {
+            padding: 10px 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        pre {
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            margin: 0;
+        }
+
+        code {
+            display: block;
+            padding: 10px;
+            font-size: 14px;
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+
+        .copy-button {
+            padding: 10px 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for smooth effect */
+        }
+        
+        .copy-button:hover {
+            background-color: #45a049; /* Change color on hover */
+            transform: translateY(-6px); /* Lift the button up slightly on hover */
+            box-shadow: 0 6px 8px rgb(247, 4, 4); /* Add a subtle box shadow on hover */
+        }
+        /* Existing CSS styles */
+
+/* Media Query for Mobile Devices */
+@media only screen and (max-width: 400px)
+{
+    body {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .code-container {
+        padding: 10px;
+        margin: 10px auto;
+        max-width: 100%; /* Allow code container to take full width on small screens */
+    }
+
+    .code-container h2 {
+        font-size: 16px; /* Adjust the font size for mobile devices */
+        word-wrap: break-word; /* Allow long words to break onto the next line */
+    }
+
+    .copy-button {
+        font-size: 12px; /* Adjust font size for smaller screens */
+    }
+
+    pre {
+        overflow-x: auto;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        margin: 0;
+        font-size: 12px; /* Adjust font size for smaller screens */
+    }
+
+    code {
+        padding: 8px;
+        font-size: 12px; /* Adjust font size for smaller screens */
+    }
+
+    .copy-button {
+        font-size: 12px;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="code-container">
+        <h2>C-DSA AREA AND PERIMETER OF SQ AND RECT</h2>
+        <button class="copy-button" onclick="copyCode('code1')">Copy Code</button>
+        <pre id="code1" data-language="plaintext">
+            <!-- Your code goes here -->
+            <code data-language="plaintext">
+                #include< stdio.h>
+
+                    int main()
+                    {
+                        int ch;
+                        float ar,l,b,s,pe;
+                        
+                            printf("\n 1.Calculate area of Rectangle\n");
+                            printf("\n 2.Calculate area of Square\n");
+                            printf("\n 3.Calculate Perimeter of Rectangle\n");
+                           
+                            
+                            printf("\nEnter your choice\n");
+                            scanf("%d",&ch);
+                            
+                            
+                            switch(ch)
+                            {
+                                case 1 : printf("\n Enter the value of length and width of rectangle\n :");
+                                scanf("%f%f",&l,&b);
+                                ar = l * b;
+                                printf("Area of Rectangle is %f sqm",ar);
+                                break;
+                                
+                                case 2 : printf("\n Enter the value of Side of Square\n :");
+                                scanf("%f",&s);
+                                
+                                ar = s * s;
+                                printf("The Area is Square is %f sqm",ar);
+                                break;
+                                
+                                case 3 : printf("\n Enter the value of length and width of rectangle\n :");
+                                scanf("%f%f",&l,&b);
+                                
+                                pe = 2 *(l +b);
+                                printf("The Perimeter of Rectangle is %f units",pe);
+                                break;
+                    
+                                
+                            }
+                    }  
+                       
+            </code>      
+        </pre>
+    </div>
+
+
+
+    <div class="code-container">
+        <h2>C-DSA AVERAGE of 3 2-D array</h2>
+        <button class="copy-button" onclick="copyCode('code2')">Copy Code</button>
+        <pre id="code2" data-language="plaintext">
+            <!-- Your code goes here -->
+            <code data-language="plaintext">
+                #include< stdio.h>
+
+                    int main()
+                    {
+                        int a[10][10];
+                        int b[10][10];
+                        int h[10][10];
+                        int z[10][10];
+                        int i,j,size;
+                        
+                        printf("Enter the Size of array :\n");
+                        scanf("%d",&size);
+                        
+                        printf("Enter the Elements for array A:\n");
+                        for(i=0;i< size ; i++)
+                        {
+                            for(j=0;j< size;j++)
+                            {
+                                scanf("%d",&a[i][j]);
+                            }
+                        }
+                        
+                        printf("Entered the Elements for array A are:\n");
+                        for(i=0;i< size;i++)
+                        {
+                            for(j=0;j < size;j++)
+                            {
+                                printf("%d \t",a[i][j]);
+                            }printf("\n");
+                        }printf("\n");
+                       
+                        printf("Enter the Elements for array B:\n");
+                        for(i=0;i< size;i++)
+                        {
+                            for(j=0;j< size;j++)
+                            {
+                                scanf("%d",&b[i][j]);
+                            }
+                        }
+                        
+                        printf("Entered the Elements for array B are:\n");
+                        for(i=0;i< size;i++)
+                        {
+                            for(j=0;j< size;j++)
+                            {
+                                printf("%d \t",b[i][j]);
+                            }printf("\n");
+                        }printf("\n");
+                        
+                        printf("Enter the Elements for array H:\n");
+                        for(i=0;i< size;i++)
+                        {
+                            for(j=0;j< size;j++)
+                            {
+                                scanf("%d",&h[i][j]);
+                            }
+                        }
+                        
+                        printf("Entered the Elements for array H are:\n");
+                        for(i=0;i< size;i++)
+                        {
+                            for(j=0;j< size;j++)
+                            {
+                                printf("%d \t",h[i][j]);
+                            }printf("\n");
+                        }printf("\n");
+                    
+                        for(i=0;i< size;i++)
+                        {
+                            for(j=0;j< size;j++)
+                            {
+                                z[i][j]=(a[i][j]+b[i][j]+h[i][j]) / 3;
+                            }
+                        }
+                        
+                        printf("\nAverage of  Elements for array A,B,H are:\n");
+                        for(i=0;i< size;i++)
+                        {
+                            for(j=0;j< size;j++)
+                            {
+                                printf("%d\t \t",z[i][j]);
+                            }printf("\n");
+                        }printf("\n");
+                    }
+            </code>      
+        </pre>
+    </div>
+
+
+
+
+    <div class="code-container">
+        <h2>C-DSA CUBE of 2-D Array</h2>
+        <button class="copy-button" onclick="copyCode('code3')">Copy Code</button>
+        <pre id="code3" data-language="plaintext">
+            <!-- Your code goes here -->
+            <code data-language="plaintext">
+                #include< stdio.h>
+
+                    int main()
+                    {
+                        int a[10][10];
+                        int b[10][10];
+                        int i,j,size;
+                        
+                        printf("Enter the Size of array :\n");
+                        scanf("%d",&size);
+                        
+                        printf("Enter the Elements for array A:\n");
+                        for(i=0;i< size;i++)
+                        {
+                            for(j=0;j< size;j++)
+                            {
+                                scanf("%d",&a[i][j]);
+                            }
+                        }
+                        
+                        printf("Entered the Elements for array A are:\n");
+                        for(i=0;i< size;i++)
+                        {
+                            for(j=0;j< size;j++)
+                            {
+                                printf("%d \t",a[i][j]);
+                            }printf("\n");
+                        }printf("\n");
+                        
+                    
+                        for(i=0;i< size;i++)
+                        {
+                            for(j=0;j< size;j++)
+                            {
+                                b[i][j]=a[i][j]*a[i][j]*a[i][j];
+                            }
+                        }
+                        
+                        printf(" \ncube of  Elements for array A are: \n " );
+                        for(i=0;i< size;i++)
+                        {
+                            for(j=0;j< size;j++)
+                            {
+                                printf("%d \t \t",b[i][j]);
+                            }printf("\n");
+                        }printf("\n");
+                    }
+            </code>      
+        </pre>
+    </div>
+
+
+
+
+    <div class="code-container">
+        <h2>C-DSA MENU DRIVEN AREA OF CIRCLE ,CIRCUM AND AREA OF TRIANGLE</h2>
+        <button class="copy-button" onclick="copyCode('code4')">Copy Code</button>
+        <pre id="code4" data-language="plaintext">
+            <!-- Your code goes here -->
+            <code data-language="plaintext">
+                #include< stdio.h>
+
+                    int main()
+                    {
+                        int ch;
+                        float ar,cum,l,b,h,r;
+                        int pi = 3.14;
+                        
+                            printf("\n 1.Calculate area of Circle\n");
+                            printf("\n 2.Calculate Circumference of Circle\n");
+                            printf("\n 3.Calculate Perimeter of Rectangle\n");
+                           
+                            
+                            printf("\nEnter your choice\n");
+                            scanf("%d",&ch);
+                            
+                            
+                            switch(ch)
+                            {
+                                case 1 : printf("\n Enter the value of Radius of Circle\n :");
+                                scanf("%f",&r);
+                                ar = pi * r * r;
+                                printf("Area of Circle is %f sqm",ar);
+                                break;
+                                
+                                case 2 :printf("\n Enter the value of Radius of Circle\n :");
+                                scanf("%f",&r);
+                                
+                                cum = 2 * pi * r;
+                                printf("The Circumference of circle is %f sqm",cum);
+                                break;
+                                
+                                case 3 : printf("\n Enter the value of Height and Base of  rectangle\n :");
+                                scanf("%f%f",&h,&b);
+                                
+                                ar = (h * b) / 2;
+                                printf("The Area of Triangle is %f sqm",ar);
+                                break;
+                                
+                                
+                            }
+                    }  
+                      
+            </code>      
+        </pre>
+    </div>
+
+
+
+
+    <div class="code-container">
+        <h2>C-DSA PUSH & POP in STACK</h2>
+        <button class="copy-button" onclick="copyCode('code5')">Copy Code</button>
+        <pre id="code5" data-language="plaintext">
+            <!-- Your code goes here -->
+            <code data-language="plaintext">
+                #include< stdio.h>  
+                    #include< stdlib.h>  
+                    #define SIZE 4  
+                    int top = -1, inp_array[SIZE];  
+                    void push();  
+                    void pop();  
+                    void show();  
+                    int main()  
+                    {  
+                        int choice;  
+                        while (1)  
+                        {  
+                            printf("\nPerform operations on the stack:");  
+                            printf("\n1.Push the element\n2.Pop the element\n3.Show\n4.End");  
+                            printf("\n\nEnter the choice: ");  
+                            scanf("%d", &choice);  
+                            switch (choice)  
+                            {  
+                            case 1:  
+                                push();  
+                                break;  
+                            case 2:  
+                                pop();  
+                                break;  
+                            case 3:  
+                                show();  
+                                break;  
+                            case 4:  
+                                exit(0);  
+                            default:  
+                                printf("\nInvalid choice!!");  
+                            }  
+                        }  
+                    }  
+                    void push()  
+                    {  
+                        int x;  
+                        if (top == SIZE - 1)  
+                        {  
+                            printf("\nOverflow!!");  
+                        }  
+                        else  
+                        {  
+                            printf("\nEnter the element to be added onto the stack: ");  
+                            scanf("%d", &x);  
+                            top = top + 1;  
+                            inp_array[top] = x;  
+                        }  
+                    }  
+                    void pop()  
+                    {  
+                        if (top == -1)  
+                        {  
+                            printf("\nUnderflow!!");  
+                        }  
+                        else  
+                        {  
+                            printf("\nPopped element: %d", inp_array[top]);  
+                            top = top - 1;  
+                        }  
+                    }  
+                    void show()  
+                    {  
+                        if (top == -1)  
+                        {  
+                            printf("\nUnderflow!!");  
+                        }  
+                        else  
+                        {  
+                            printf("\nElements present in the stack: \n");  
+                            for (int i = top; i >= 0; --i)  
+                                printf("%d\n", inp_array[i]);  
+                        }  
+                    }  
+            </code>      
+        </pre>
+    </div>
+
+
+
+
+
+    <div class="code-container">
+        <h2>C-DSA Program to ADD two Matrix</h2>
+        <button class="copy-button" onclick="copyCode('code6')">Copy Code</button>
+        <pre id="code6" data-language="plaintext">
+            <!-- Your code goes here -->
+            <code data-language="plaintext">
+                #include< stdio.h>
+                    int main() 
+                    {
+                        int i,j,r,c,sum;
+                        int a[10][10];
+                        int b[10][10];
+                        int z[10][10];
+                        printf("Enter the Number of rows and columns:\n");
+                        scanf("%d%d",&r,&c);
+                        
+                         printf("\nEnter any  Matrix");
+                         for(i=0;i< r;i++)
+                         {
+                             for(j=0;j< c;j++)
+                             {
+                                 scanf("%d",&a[i][j]);
+                             }printf("\n");
+                         }
+                         printf("\nEntered matrix is \n");
+                    
+                         for(i=0;i< r;i++)
+                         {
+                             for(j=0;j< c;j++)
+                             {
+                                 printf("%d \t",a[i][j]);
+                             }printf("\n");
+                         }printf("\n");
+                    
+                         printf("\nEnter any  Matrix");
+                    
+                         for(i=0;i< r;i++)
+                         {
+                             for(j=0;j< c;j++)
+                             {
+                                 scanf("%d",&b[i][j]);
+                             }printf("\n");
+                         }
+                         printf("\nEntered matrix is \n");
+                    
+                         for(i=0;i< r;i++)
+                         {
+                             for(j=0;j< c;j++)
+                             {
+                                 printf("%d \t",a[i][j]);
+                             }printf("\n");
+                         }printf("\n");
+                        
+                        printf("\nFinal matrix is \n");
+                         for(i=0;i< r;i++)
+                         {
+                             for(j=0;j< c;j++)
+                             {  z[i][j]=a[i][j]+b[i][j];
+                                 printf("%d \t",z[i][j]);
+                             }printf("\n");
+                         }printf("\n");
+                    }  
+            </code>      
+        </pre>
+    </div>
+
+
+
+
+    <div class="code-container">
+        <h2>C-DSA Program to SUB two Matrix</h2>
+        <button class="copy-button" onclick="copyCode('code7')">Copy Code</button>
+        <pre id="code7" data-language="plaintext">
+            <!-- Your code goes here -->
+            <code data-language="plaintext">
+                #include< stdio.h>
+                    int main() 
+                    {
+                        int i,j,r,c,sum;
+                        int a[10][10];
+                        int b[10][10];
+                        int z[10][10];
+                        printf("Enter the Number of rows and columns:\n");
+                        scanf("%d%d",&r,&c);
+                        
+                         printf("\nEnter any  Matrix");
+                         for(i=0;i< r;i++)
+                         {
+                             for(j=0;j< c;j++)
+                             {
+                                 scanf("%d",&a[i][j]);
+                             }printf("\n");
+                         }
+                         printf("\nEntered matrix is \n");
+                    
+                         for(i=0;i< r;i++)
+                         {
+                             for(j=0;j< c;j++)
+                             {
+                                 printf("%d \t",a[i][j]);
+                             }printf("\n");
+                         }printf("\n");
+                    
+                         printf("\nEnter any  Matrix");
+                    
+                         for(i=0;i< r;i++)
+                         {
+                             for(j=0;j< c;j++)
+                             {
+                                 scanf("%d",&b[i][j]);
+                             }printf("\n");
+                         }
+                         printf("\nEntered matrix is \n");
+                    
+                         for(i=0;i< r;i++)
+                         {
+                             for(j=0;j< c;j++)
+                             {
+                                 printf("%d \t",a[i][j]);
+                             }printf("\n");
+                         }printf("\n");
+                        
+                        printf("\nFinal matrix is \n");
+                         for(i=0;i< r;i++)
+                         {
+                             for(j=0;j< c;j++)
+                             {  z[i][j]=a[i][j]-b[i][j];
+                                 printf(" %d \t",z[i][j]);
+                             }printf("\n");
+                         }printf("\n");
+                    }
+            </code>      
+        </pre>
+    </div>
+
+
+
+
+
+    <div class="code-container">
+        <h2>C-DSA SQUARE of 1-D Array</h2>
+        <button class="copy-button" onclick="copyCode('code8')">Copy Code</button>
+        <pre id="code8" data-language="plaintext">
+            <!-- Your code goes here -->
+            <code data-language="plaintext">
+                #include< stdio.h>
+
+                    int main()
+                    {
+                        int a[10];
+                        int b[10];
+                        int i,size;
+                        
+                        printf("Enter the Size of array :\n");
+                        scanf("%d",&size);
+                        
+                        printf("Enter the Elements for array A:\n");
+                        for(i=0;i< size;i++)
+                        {
+                            scanf("%d",&a[i]);
+                        }
+                        
+                        printf("Entered the Elements for array A are:\n");
+                        for(i=0;i< size;i++)
+                        {
+                            printf("%d \t",a[i]);
+                        }
+                    
+                        for(i=0;i< size;i++)
+                        {
+                            b[i]=a[i]*a[i];
+                        }
+                        
+                        printf("\nSquare of  Elements for array A are:\n");
+                        for(i=0;i< size;i++)
+                        {
+                            printf("%d \n",b[i]);
+                        }
+                    }
+            </code>      
+        </pre>
+    </div>
+
+
+
+    <div class="code-container">
+        <h2>C-DSA AREA AND PERIMETER OF SQ AND RECT</h2>
+        <button class="copy-button" onclick="copyCode('code9')">Copy Code</button>
+        <pre id="code9" data-language="plaintext">
+            <!-- Your code goes here -->
+            <code data-language="plaintext">
+ 
+            </code>      
+        </pre>
+    </div>
+
+
+
+
+
+    <div class="code-container">
+        <h2>C-DSA AREA AND PERIMETER OF SQ AND RECT</h2>
+        <button class="copy-button" onclick="copyCode('code10')">Copy Code</button>
+        <pre id="code10" data-language="plaintext">
+            <!-- Your code goes here -->
+            <code data-language="plaintext">
+ 
+            </code>      
+        </pre>
+    </div>
+
+
+
+
+
+    <div class="code-container">
+        <h2>C-DSA AREA AND PERIMETER OF SQ AND RECT</h2>
+        <button class="copy-button" onclick="copyCode('code11')">Copy Code</button>
+        <pre id="code11" data-language="plaintext">
+            <!-- Your code goes here -->
+            <code data-language="plaintext">
+ 
+            </code>      
+        </pre>
+    </div>
+
+
+
+
+    <div class="code-container">
+        <h2>C-DSA AREA AND PERIMETER OF SQ AND RECT</h2>
+        <button class="copy-button" onclick="copyCode('code12')">Copy Code</button>
+        <pre id="code12" data-language="plaintext">
+            <!-- Your code goes here -->
+            <code data-language="plaintext">
+ 
+            </code>      
+        </pre>
+    </div>
+
+
+
+
+
+
+    <div class="code-container">
+        <h2>C-DSA AREA AND PERIMETER OF SQ AND RECT</h2>
+        <button class="copy-button" onclick="copyCode('code13')">Copy Code</button>
+        <pre id="code13" data-language="plaintext">
+            <!-- Your code goes here -->
+            <code data-language="plaintext">
+ 
+            </code>      
+        </pre>
+    </div>
+    <!-- Add more code containers as needed -->
+
+    <script>
+        function copyCode(codeId) {
+            var codeElement = document.getElementById(codeId);
+            var codeText = codeElement.innerText;
+
+            navigator.clipboard.writeText(codeText).then(function() {
+                alert('Code copied to clipboard!');
+            }).catch(function(err) {
+                console.error('Unable to copy code to clipboard', err);
+            });
+        }
+    </script>
+
+</body>
+
+</html>
