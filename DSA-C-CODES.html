@@ -660,12 +660,32 @@
 
 
     <div class="code-container">
-        <h2>C-DSA AREA AND PERIMETER OF SQ AND RECT</h2>
+        <h2>C-DSA Program to find FACTORIAL of a number using RECURSION</h2>
         <button class="copy-button" onclick="copyCode('code9')">Copy Code</button>
         <pre id="code9" data-language="plaintext">
             <!-- Your code goes here -->
             <code data-language="plaintext">
- 
+                #include< stdio.h>
+                    int fact(int n)
+                    {
+                        if(n==0)
+                        {
+                            return 1;
+                        }
+                        else
+                        {
+                            return(n * fact (n-1));
+                        }
+                    }
+                    void main()
+                    {
+                       int num,f;
+                       printf("enter any number :");
+                       scanf("%d",&num);
+                       f = fact(num);
+                     
+                       printf("\n the factorial of %d is %d",num,f);
+                    }
             </code>      
         </pre>
     </div>
