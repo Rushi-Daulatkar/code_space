@@ -26,10 +26,13 @@
             <button class="button2" onclick="SignInPage()">Sign Up</button>
         </div>
         <button class="button3" onclick="openForgotPasswordPage()">Forgot Password</button>
+
+        <form class="form" onsubmit="validateAndOpenPage(); return false;">
+        </form>
+
     </form>
 
-    <form class="form" onsubmit="validateAndOpenPage(); return false;">
-    </form>
+    
 
     <script>
         function validateAndOpenPage() {
@@ -43,7 +46,7 @@
             }
 
             // Construct the URL with the provided data
-            var url = 'index.html?username=' + encodeURIComponent(username) + '&password=' + encodeURIComponent(password);
+            var url = 'forgot.html?username=' + encodeURIComponent(username) + '&password=' + encodeURIComponent(password);
 
             // Open the new page
             window.open(url, '_blank');
@@ -51,7 +54,7 @@
 
         function openForgotPasswordPage() {
             // Open the forgot password page
-            window.open('todo.html', '_blank');
+            window.open('forgot.html', '_blank');
         }
         function SignInPage() {
             // Open the forgot password page
