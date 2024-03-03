@@ -1051,12 +1051,67 @@ int main()
 
 
     <div class="code-container">
-        <h2>C-DSA AREA AND PERIMETER OF SQ AND RECT</h2>
+        <h2>C-DSA Program for SELECTION SORT</h2>
         <button class="copy-button" onclick="copyCode('code14')">Copy Code</button>
         <pre id="code14" data-language="plaintext">
             <!-- Your code goes here -->
             <code data-language="plaintext">
- 
+                #include < stdio.h>
+
+                    void selectionSort(int arr[], int n) {
+                        int i, j, minIndex, temp;
+                    
+                        for (i = 0; i < n - 1; i++) {
+                            minIndex = i;
+                    
+                            // Search for the minimum element in the remaining unsorted array
+                            for (j = i + 1; j < n; j++) {
+                                if (arr[j] < arr[minIndex]) {
+                                    minIndex = j;
+                                }
+                            }
+                    
+                            // Swap the found minimum element with the first element
+                            temp = arr[i];
+                            arr[i] = arr[minIndex];
+                            arr[minIndex] = temp;
+                        }
+                    }
+                    
+                    void printArray(int arr[], int size) {
+                        for (int i = 0; i < size; i++) {
+                            printf("%d ", arr[i]);
+                        }
+                        printf("\n");
+                    }
+                    
+                    int main() {
+                        int n;
+                    
+                        // Get the number of elements from the user
+                        printf("Enter the number of elements: ");
+                        scanf("%d", &n);
+                    
+                        int arr[n];
+                    
+                        // Get the elements from the user
+                        printf("Enter the elements:\n");
+                        for (int i = 0; i < n; i++) {
+                            printf("Element %d: ", i + 1);
+                            scanf("%d", &arr[i]);
+                        }
+                    
+                        printf("Original array: ");
+                        printArray(arr, n);
+                    
+                        selectionSort(arr, n);
+                    
+                        printf("Sorted array: ");
+                        printArray(arr, n);
+                    
+                        return 0;
+                    }
+                          
             </code>      
         </pre>
     </div>
@@ -1066,12 +1121,64 @@ int main()
 
 
     <div class="code-container">
-        <h2>C-DSA AREA AND PERIMETER OF SQ AND RECT</h2>
+        <h2>C-DSA Program for INSERTION SORT</h2>
         <button class="copy-button" onclick="copyCode('code15')">Copy Code</button>
         <pre id="code15" data-language="plaintext">
             <!-- Your code goes here -->
             <code data-language="plaintext">
- 
+                #include < stdio.h>
+
+                    void insertionSort(int arr[], int n) {
+                        int i, key, j;
+                    
+                        for (i = 1; i < n; i++) {
+                            key = arr[i];
+                            j = i - 1;
+                    
+                            // Move elements of arr[0..i-1] that are greater than key
+                            // to one position ahead of their current position
+                            while (j >= 0 && arr[j] > key) {
+                                arr[j + 1] = arr[j];
+                                j = j - 1;
+                            }
+                            arr[j + 1] = key;
+                        }
+                    }
+                    
+                    void printArray(int arr[], int size) {
+                        for (int i = 0; i < size; i++) {
+                            printf("%d ", arr[i]);
+                        }
+                        printf("\n");
+                    }
+                    
+                    int main() {
+                        int n;
+                    
+                        // Get the number of elements from the user
+                        printf("Enter the number of elements: ");
+                        scanf("%d", &n);
+                    
+                        int arr[n];
+                    
+                        // Get the elements from the user
+                        printf("Enter the elements:\n");
+                        for (int i = 0; i < n; i++) {
+                            printf("Element %d: ", i + 1);
+                            scanf("%d", &arr[i]);
+                        }
+                    
+                        printf("Original array: ");
+                        printArray(arr, n);
+                    
+                        insertionSort(arr, n);
+                    
+                        printf("Sorted array: ");
+                        printArray(arr, n);
+                    
+                        return 0;
+                    }
+                    
             </code>      
         </pre>
     </div>
