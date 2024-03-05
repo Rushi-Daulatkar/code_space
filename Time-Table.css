@@ -1,0 +1,32 @@
+html{
+    background-color:antiquewhite;
+}
+tr{
+    color: black;
+}
+table, th, td {
+    text-align: center;
+    border: 1px solid black;
+    border-spacing: 10px;
+    font-size:smaller;
+  }
+  h1{
+    text-align: center;
+  }
+  .csbs > table{
+    width: 100%;
+  }
+
+
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 600px) {
+    th, td {
+        font-size: 12px;
+        padding: 5px; /* Adjust padding for smaller screens */
+    }
+
+    h1 {
+        font-size: 18px; /* Adjust font size for smaller screens */
+    }
+}
