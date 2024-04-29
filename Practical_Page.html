@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSA-C-CODES</title>
+    <link rel="icon" type="image/png/jpeg" href="MY_FAV.jpeg">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .code-container {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 600px;
+            text-align: left;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .code-container h2 {
+            font-size: 18px; /* Adjust the font size */
+            color: #333; /* Adjust the text color */
+            margin-bottom: 10px; /* Add margin at the bottom for spacing */
+            word-wrap: break-word; /* Allow long words to break onto the next line */
+        }
+        .copy-button {
+            padding: 10px 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        pre {
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            margin: 0;
+        }
+
+        code {
+            display: block;
+            padding: 10px;
+            font-size: 14px;
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+
+        .copy-button {
+            padding: 10px 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for smooth effect */
+        }
+        
+        .copy-button:hover {
+            background-color: #45a049; /* Change color on hover */
+            transform: translateY(-6px); /* Lift the button up slightly on hover */
+            box-shadow: 0 6px 8px rgb(247, 4, 4); /* Add a subtle box shadow on hover */
+        }
+        /* Existing CSS styles */
+
+/* Media Query for Mobile Devices */
+@media only screen and (max-width: 400px)
+{
+    body {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .code-container {
+        padding: 10px;
+        margin: 10px auto;
+        max-width: 100%; /* Allow code container to take full width on small screens */
+    }
+
+    .code-container h2 {
+        font-size: 16px; /* Adjust the font size for mobile devices */
+        word-wrap: break-word; /* Allow long words to break onto the next line */
+    }
+
+    .copy-button {
+        font-size: 12px; /* Adjust font size for smaller screens */
+    }
+
+    pre {
+        overflow-x: auto;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        margin: 0;
+        font-size: 12px; /* Adjust font size for smaller screens */
+    }
+
+    code {
+        padding: 8px;
+        font-size: 12px; /* Adjust font size for smaller screens */
+    }
+
+    .copy-button {
+        font-size: 12px;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+
+    <div class="code-container">
+        <h2>C-DSA Program to find FACTORIAL of a number using RECURSION</h2>
+        <button class="copy-button" onclick="copyCode('code1')">Copy Code</button>
+        <pre id="code1" data-language="plaintext">
+            <!-- Your code goes here -->
+            <code data-language="plaintext">
+                #include< stdio.h>
+                    int fact(int n)
+                    {
+                        if(n==0)
+                        {
+                            return 1;
+                        }
+                        else
+                        {
+                            return(n * fact (n-1));
+                        }
+                    }
+                    void main()
+                    {
+                       int num,f;
+                       printf("enter any number :");
+                       scanf("%d",&num);
+                       f = fact(num);
+                     
+                       printf("\n the factorial of %d is %d",num,f);
+                    }
+            </code>      
+        </pre>
+    </div>
+
+
+
+
+
+    <div class="code-container">
+        <h2>C-DSA C Program to Perform Operations on STACK </h2>
+        <button class="copy-button" onclick="copyCode('code2')">Copy Code</button>
+        <pre id="code2" data-language="plaintext">
+            <!-- Your code goes here -->
+            <code data-language="plaintext">
+                #include < stdio.h>  
+                    #include < stdlib.h>  
+                    #define SIZE 4  
+                    int top = -1, inp_array[SIZE];  
+                    void push();  
+                    void pop();  
+                    void show();  
+                    int main()  
+                    {  
+                        int choice;  
+                        while (1)  
+                        {  
+                            printf("\nPerform operations on the stack:");  
+                            printf("\n1.Push the element\n2.Pop the element\n3.Show\n4.End");  
+                            printf("\n\nEnter the choice: ");  
+                            scanf("%d", &choice);  
+                            switch (choice)  
+                            {  
+                            case 1:  
+                                push();  
+                                break;  
+                            case 2:  
+                                pop();  
+                                break;  
+                            case 3:  
+                                show();  
+                                break;  
+                            case 4:  
+                                exit(0);  
+                            default:  
+                                printf("\nInvalid choice!!");  
+                            }  
+                        }  
+                    }  
+                    void push()  
+                    {  
+                        int x;  
+                        if (top == SIZE - 1)  
+                        {  
+                            printf("\nOverflow!!");  
+                        }  
+                        else  
+                        {  
+                            printf("\nEnter the element to be added onto the stack: ");  
+                            scanf("%d", &x);  
+                            top = top + 1;  
+                            inp_array[top] = x;  
+                        }  
+                    }  
+                    void pop()  
+                    {  
+                        if (top == -1)  
+                        {  
+                            printf("\nUnderflow!!");  
+                        }  
+                        else  
+                        {  
+                            printf("\nPopped element: %d", inp_array[top]);  
+                            top = top - 1;  
+                        }  
+                    }  
+                    void show()  
+                    {  
+                        if (top == -1)  
+                        {  
+                            printf("\nUnderflow!!");  
+                        }  
+                        else  
+                        {  
+                            printf("\nElements present in the stack: \n");  
+                            for (int i = top; i >= 0; --i)  
+                                printf("%d\n", inp_array[i]);  
+                        }  
+                    }  
+            </code>      
+        </pre>
+    </div>
+
+
+
+
+
+    <div class="code-container">
+        <h2>C-DSA C Program to Perform Operations on QUEUE</h2>
+        <button class="copy-button" onclick="copyCode('code3')">Copy Code</button>
+        <pre id="code3" data-language="plaintext">
+            <!-- Your code goes here -->
+            <code data-language="plaintext">
+                #include < stdio.h>
+                    #define MAX 20
+                    #include< stdlib.h>
+                    int queue_array[MAX];
+                    int rear = - 1;
+                    int front = - 1;
+                    void insert()
+                    {
+                          int add_item;
+                          if (rear == MAX - 1)
+                                printf("Queue Overflow \n");
+                          else
+                          {
+                                if (front == - 1)
+                                      /*If queue is initially empty */
+                                      front = 0;
+                                printf("\nEnter element : ");
+                                scanf("%d", &add_item);
+                                printf("\n%d is inserted in queue\n",add_item);
+                                printf("------------------------------\n");
+                                rear = rear + 1;
+                                queue_array[rear] = add_item;
+                          }
+                    }
+                    void delete()
+                    {
+                          if (front == - 1 || front > rear)
+                          {
+                                printf("Queue Underflow \n");
+                                return ;
+                          }
+                          else
+                          {
+                                printf("\nElement deleted from queue is : %d\n", queue_array[front]);
+                                printf("------------------------------\n");
+                                front = front + 1;
+                          }
+                    }
+                    void display()
+                    {
+                          int i;
+                          if (front == - 1)
+                                printf("Queue is empty \n");
+                          else
+                          {
+                                printf("\nQueue is : ");
+                                for (i = front; i <= rear; i++)
+                                      printf("%d ", queue_array[i]);
+                                printf("\n------------------------------");
+                                printf("\n");
+                          }
+                    }
+                    int main()
+                    {
+                          printf("Perform operations on queue\n");
+                          printf("------------------------------\n");
+                          printf("\tMenu");
+                          printf("\n------------------------------\n");
+                          printf("1. Insert element \n");
+                          printf("2. Delete element \n");
+                          printf("3. Display queue\n");
+                          printf("4. Exit\n");
+                          printf("------------------------------\n");
+                          int ch;
+                          while (1)
+                          {
+                                printf("Choose operation : ");
+                                scanf("%d", &ch);
+                                switch(ch)
+                                {
+                                      case 1:
+                                            insert();
+                                            break;
+                                      case 2:
+                                            delete();
+                                            break;
+                                      case 3:
+                                            display();
+                                            break;
+                                      case 4:
+                                            exit(1);
+                                      default:
+                                            printf("Invalid operation \n");
+                                }
+                          }
+                          return 0;
+                    }
+            </code>      
+        </pre>
+    </div>
+
+
+
+
+    <div class="code-container">
+        <h2>C-DSA Menu driven program for BUBBLE SORT ALGORITHM</h2>
+        <button class="copy-button" onclick="copyCode('code4')">Copy Code</button>
+        <pre id="code4" data-language="plaintext">
+            <!-- Your code goes here -->
+            <code data-language="plaintext">
+                // Optimized implementation of Bubble sort
+                #include < stdbool.h>
+                #include < stdio.h>
+                
+                void swap(int* xp, int* yp)
+                {
+                    int temp = *xp;
+                    *xp = *yp;
+                    *yp = temp;
+                }
+                
+                // An optimized version of Bubble Sort
+                void bubbleSort(int arr[10], int n)
+                {
+                    int i, j;
+                    bool swapped;
+                    for (i = 0; i < n - 1; i++) {
+                        swapped = false;
+                        for (j = 0; j < n - i - 1; j++) {
+                            if (arr[j] > arr[j + 1]) {
+                                swap(&arr[j], &arr[j + 1]);
+                                swapped = true;
+                            }
+                        }
+                
+                        // If no two elements were swapped by inner loop,
+                        // then break
+                        if (swapped == false)
+                            break;
+                    }
+                }
+                
+                // Function to print an array
+                void printArray(int arr[], int size)
+                {
+                    int i;
+                    for (i = 0; i < size; i++)
+                        printf("%d ", arr[i]);
+                }
+                
+                // Driver program to test above functions
+                int main()
+                {   int i;
+                    int arr[10];
+                    printf("Enter ant 10 elements :\n");
+                    for(i=0;i< 10;i++)
+                    {
+                        scanf("%d",&arr[i]);
+                    }
+                    int n = sizeof(arr) / sizeof(arr[0]);
+                    bubbleSort(arr, n);
+                    printf("Sorted array: \n");
+                    printArray(arr, n);
+                    return 0;
+                }
+            </code>      
+        </pre>
+    </div>
+
+
+
+
+    <div class="code-container">
+        <h2>DSA-C Program for SELECTION SORT ELEMENT</h2>
+        <button class="copy-button" onclick="copyCode('code5')">Copy Code</button>
+        <pre id="code5" data-language="plaintext">
+            <!-- Your code goes here -->
+            <code data-language="plaintext">
+                #include < stdio.h>
+
+                    void selectionSort(int arr[], int n) {
+                        int i, j, minIndex, temp;
+                    
+                        for (i = 0; i < n - 1; i++) {
+                            minIndex = i;
+                    
+                            // Search for the minimum element in the remaining unsorted array
+                            for (j = i + 1; j < n; j++) {
+                                if (arr[j] < arr[minIndex]) {
+                                    minIndex = j;
+                                }
+                            }
+                    
+                            // Swap the found minimum element with the first element
+                            temp = arr[i];
+                            arr[i] = arr[minIndex];
+                            arr[minIndex] = temp;
+                        }
+                    }
+                    
+                    void printArray(int arr[], int size) {
+                        for (int i = 0; i < size; i++) {
+                            printf("%d ", arr[i]);
+                        }
+                        printf("\n");
+                    }
+                    
+                    int main() {
+                        int n;
+                    
+                        // Get the number of elements from the user
+                        printf("Enter the number of elements: ");
+                        scanf("%d", &n);
+                    
+                        int arr[n];
+                    
+                        // Get the elements from the user
+                        printf("Enter the elements:\n");
+                        for (int i = 0; i < n; i++) {
+                            printf("Element %d: ", i + 1);
+                            scanf("%d", &arr[i]);
+                        }
+                    
+                        printf("Original array: ");
+                        printArray(arr, n);
+                    
+                        selectionSort(arr, n);
+                    
+                        printf("Sorted array: ");
+                        printArray(arr, n);
+                    
+                        return 0;
+                    }
+                    
+            </code>      
+        </pre>
+    </div>
+
+
+    <div class="code-container">
+        <h2>DSA-C Program for INSERTION SORT ELEMENT</h2>
+        <button class="copy-button" onclick="copyCode('code6')">Copy Code</button>
+        <pre id="code6" data-language="plaintext">
+            <!-- Your code goes here -->
+            <code data-language="plaintext">
+                #include < stdio.h>
+
+                    void insertionSort(int arr[], int n) {
+                        int i, key, j;
+                    
+                        for (i = 1; i < n; i++) {
+                            key = arr[i];
+                            j = i - 1;
+                    
+                            // Move elements of arr[0..i-1] that are greater than key
+                            // to one position ahead of their current position
+                            while (j >= 0 && arr[j] > key) {
+                                arr[j + 1] = arr[j];
+                                j = j - 1;
+                            }
+                            arr[j + 1] = key;
+                        }
+                    }
+                    
+                    void printArray(int arr[], int size) {
+                        for (int i = 0; i < size; i++) {
+                            printf("%d ", arr[i]);
+                        }
+                        printf("\n");
+                    }
+                    
+                    int main() {
+                        int n;
+                    
+                        // Get the number of elements from the user
+                        printf("Enter the number of elements: ");
+                        scanf("%d", &n);
+                    
+                        int arr[n];
+                    
+                        // Get the elements from the user
+                        printf("Enter the elements:\n");
+                        for (int i = 0; i < n; i++) {
+                            printf("Element %d: ", i + 1);
+                            scanf("%d", &arr[i]);
+                        }
+                    
+                        printf("Original array: ");
+                        printArray(arr, n);
+                    
+                        insertionSort(arr, n);
+                    
+                        printf("Sorted array: ");
+                        printArray(arr, n);
+                    
+                        return 0;
+                    }
+            </code>      
+        </pre>
+    </div>
+
+
+
+
+
+    <div class="code-container">
+        <h2>C-DSA Program for LINKED LIST</h2>
+        <button class="copy-button" onclick="copyCode('code7')">Copy Code</button>
+        <pre id="code7" data-language="plaintext">
+            <!-- Your code goes here -->
+            <code data-language="plaintext">
+                #include < stdio.h>
+                    #include < stdlib.h>
+                    
+                    // Linked List Node
+                    struct node {
+                        int info;
+                        struct node* link;
+                    };
+                    struct node* start = NULL;
+                    
+                    // Function to create list with n nodes initially
+                    void insertAtFront(int data) {
+                        struct node* temp;
+                        temp = malloc(sizeof(struct node));
+                        temp->info = data;
+                        temp->link = start;
+                        start = temp;
+                    }
+                    
+                    // Function to delete from the end
+                    // of the linked list
+                    void deleteEnd() {
+                        struct node *temp, *prevnode;
+                        if (start == NULL)
+                            printf("\nList is Empty\n");
+                        else {
+                            temp = start;
+                            while (temp->link != NULL) {
+                                prevnode = temp;
+                                temp = temp->link;
+                            }
+                            if (temp == start) {
+                                start = NULL;
+                            } else {
+                                free(temp);
+                                prevnode->link = NULL;
+                            }
+                        }
+                    }
+                    
+                    // Function to traverse the linked list
+                    void traverse() {
+                        struct node* temp;
+                    
+                        // List is empty
+                        if (start == NULL)
+                            printf("\nList is empty\n");
+                        // Else print the LL
+                        else {
+                            temp = start;
+                            while (temp != NULL) {
+                                printf("%d \t", temp->info);
+                                temp = temp->link;
+                            }
+                        }
+                    }
+                    
+                    // Driver Code
+                    int main() {
+                        int choice, data;
+                        while (1) {
+                            printf("\n\t1 Display linked list\n");
+                            printf("\t2 Insert at beginning\n");
+                            printf("\t3 Delete at end\n");
+                            printf("\t4 Exit\n");
+                            printf("\nEnter Choice :\n");
+                            scanf("%d", &choice);
+                    
+                            switch (choice) {
+                                case 1:
+                                    traverse();
+                                    break;
+                                case 2:
+                                    printf("\nEnter number to be inserted at the beginning: ");
+                                    scanf("%d", &data);
+                                    insertAtFront(data);
+                                    break;
+                                case 3:
+                                    deleteEnd();
+                                    break;
+                                case 4:
+                                    exit(0);
+                                    break;
+                                default:
+                                    printf("Incorrect Choice\n");
+                            }
+                        }
+                        return 0;
+                    }
+                    
+            </code>      
+        </pre>
+    </div>
+
+    <div class="code-container">
+        <h2>C-DSA Program for DOUBLY LINKED LIST</h2>
+        <button class="copy-button" onclick="copyCode('code8')">Copy Code</button>
+        <pre id="code8" data-language="plaintext">
+            <!-- Your code goes here -->
+            <code data-language="plaintext">
+                Renuka Mam has Cancelled the Practical
+                No Worries !
+            </code>      
+        </pre>
+    </div>
+
+
+
+
+
+    <div class="code-container">
+        <h2>C-DSA Program for CIRCULAR LINKED LIST</h2>
+        <button class="copy-button" onclick="copyCode('code9')">Copy Code</button>
+        <pre id="code9" data-language="plaintext">
+            <!-- Your code goes here -->
+            <code data-language="plaintext">
+                Renuka Mam has Cancelled the Practical
+                No Worries !
+            </code>      
+        </pre>
+    </div>
+
+
+
+
+
+    <div class="code-container">
+        <h2>C-DSA Program for LINEAR SEARCH</h2>
+        <button class="copy-button" onclick="copyCode('code10')">Copy Code</button>
+        <pre id="code10" data-language="plaintext">
+            <!-- Your code goes here -->
+            <code data-language="plaintext">
+                #include< stdio.h>
+                    int main()
+                    {
+                        int a[10];
+                        int i,num,flag=0,pos;
+                        printf("\n Enter 10 Elements :");
+                        for(i=0;i< 10;i++)
+                        {
+                            scanf("%d",&a[i]);
+                        }
+                        printf("\n Enter the number you want to search: ");
+                        scanf("%d",&num);
+                        for(i=0;i< 10;i++)
+                        {
+                            if(a[i]==num)
+                            {
+                                printf("\n Search is Successful ");
+                                pos=i+1;
+                                flag=1;
+                                printf("\n Element is present at position %d",pos);
+                                break;
+                            }
+                        }
+                        if(flag==0)
+                        {
+                            printf("\n Search is unsuccessful: Element is not present");
+                        }
+                    }
+            </code>      
+        </pre>
+    </div>
+
+
+    <div class="code-container">
+        <h2>C-DSA Program for BINARY SEARCH</h2>
+        <button class="copy-button" onclick="copyCode('code11')">Copy Code</button>
+        <pre id="code11" data-language="plaintext">
+            <!-- Your code goes here -->
+            <code data-language="plaintext">
+                #include < stdio.h>
+                    #define MAX 10
+                    
+                    void binary(int *a);
+                    
+                    int main()
+                    {
+                        int arr[MAX], i;
+                        printf("\n Enter %d Elements: ", MAX);
+                        for (i = 0; i < MAX; i++)
+                        {
+                            scanf("%d", &arr[i]);
+                        }
+                        binary(arr);
+                        return 0;
+                    }
+                    
+                    void binary(int *a)
+                    {
+                        int num, low, high, mid, flag = 0;
+                        printf("\n Enter the number you want to search: ");
+                        scanf("%d", &num);
+                        low = 0;
+                        high = MAX - 1;
+                        while (low <= high)
+                        {
+                            mid = (low + high) / 2;
+                            if (a[mid] == num)
+                            {
+                                printf("\n Search is Successful ");
+                                flag = 1;
+                                printf("\n Element is present at position %d", mid);
+                                break;
+                            }
+                            else
+                            {
+                                if (a[mid] < num)
+                                {
+                                    low = mid + 1;
+                                }
+                                else
+                                {
+                                    high = mid - 1;
+                                }
+                            }
+                        }
+                        if (flag == 0)
+                        {
+                            printf("\n Search is unsuccessful: Element is not present");
+                        }
+                    }
+            </code>      
+        </pre>
+    </div>
+
+
+
+    <div class="code-container">
+        <h2>C-DSA Program for BST</h2>
+        <button class="copy-button" onclick="copyCode('code12')">Copy Code</button>
+        <pre id="code12" data-language="plaintext">
+            <!-- Your code goes here -->
+            <code data-language="plaintext">
+                
+            </code>      
+        </pre>
+    </div>
+
+
+
+    <div class="code-container">
+        <h2>C-DSA Program for BFS</h2>
+        <button class="copy-button" onclick="copyCode('code13')">Copy Code</button>
+        <pre id="code13" data-language="plaintext">
+            <!-- Your code goes here -->
+            <code data-language="plaintext">
+                
+            </code>      
+        </pre>
+    </div>
+
+
+    <div class="code-container">
+        <h2>C-DSA Program for DFS</h2>
+        <button class="copy-button" onclick="copyCode('code14')">Copy Code</button>
+        <pre id="code14" data-language="plaintext">
+            <!-- Your code goes here -->
+            <code data-language="plaintext">
+                
+            </code>      
+        </pre>
+    </div>
+
+    <div class="code-container">
+        <h2></h2>
+        <button class="copy-button" onclick="copyCode('code15')">Copy Code</button>
+        <pre id="code15" data-language="plaintext">
+            <!-- Your code goes here -->
+            <code data-language="plaintext">
+                
+            </code>      
+        </pre>
+    </div>
+    <!-- Add more code containers as needed -->
+
+    <script>
+        function copyCode(codeId) {
+            var codeElement = document.getElementById(codeId);
+            var codeText = codeElement.innerText;
+
+            navigator.clipboard.writeText(codeText).then(function() {
+                alert('Code copied to clipboard!');
+            }).catch(function(err) {
+                console.error('Unable to copy code to clipboard', err);
+            });
+        }
+    </script>
+
+</body>
+
+</html>
