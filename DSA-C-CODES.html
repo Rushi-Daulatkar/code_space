@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DSA-C-CODES</title>
     <link rel="icon" type="image/png/jpeg" href="MY_FAV.jpeg">
-    <script src="restrict.js"></script>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -1493,7 +1492,12 @@ int main()
     </div>
 
     <!-- Add more code containers as needed -->
-
+    <script>
+        document.addEventListener("contextmenu",function(event){
+            alert("Inspect Elements Not Allowed");
+            event.preventDefault();
+        })    
+    </script>
     <script>
         function copyCode(codeId) {
             var codeElement = document.getElementById(codeId);

@@ -41,6 +41,11 @@
         </div>
     </div>
     <script src="calc.js"></script>
-    <script src="restrict.js"></script>
+    <script>
+        document.addEventListener("contextmenu",function(event){
+            alert("Inspect Elements Not Allowed");
+            event.preventDefault();
+        })    
+    </script>
 </body>
 </html>

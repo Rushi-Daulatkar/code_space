@@ -7,7 +7,6 @@
     <link rel="icon" type="image/png/jpeg" href="MY_FAV.jpeg">
     <title>Welcome Page</title>
     <link rel="stylesheet" href="welcome.css">
-    <script src="restrict.js"></script>
 </head>
 <body class="privacy-policy page-template-default page page-id-3 logged-in admin-bar no-customize-support elementor-default elementor-kit-5">
 
@@ -47,6 +46,11 @@
         window.location.href = "calc.html";
     });
 </script>
-
+<script>
+    document.addEventListener("contextmenu",function(event){
+        alert("Inspect Elements Not Allowed");
+        event.preventDefault();
+    })    
+</script>
 </body>
 </html>

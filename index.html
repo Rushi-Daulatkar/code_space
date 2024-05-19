@@ -5,9 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="index.css"/>
-    <script src="restrict.js"></script>
 </head>
 <body>
+    <script>
+        document.addEventListener("contextmenu",function(event){
+            alert("Inspect Elements Not Allowed");
+            event.preventDefault();
+        })    
+    </script>
     <form class="form" onsubmit="validateAndOpenPage(); return false;">
         <p id="heading">Login</p>
         <div class="field">

@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404 Not Found</title>
     <link rel="icon" type="image/png/jpeg" href="MY_FAV.jpeg">
-    <script src="restrict.js"></script>
     <style>
         body {
             display: flex;
@@ -82,5 +81,11 @@
         <h1 class="glitch" data-text="404">404</h1>
         <p>Page Not Found</p>
     </div>
+    <script>
+        document.addEventListener("contextmenu",function(event){
+            alert("Inspect Elements Not Allowed");
+            event.preventDefault();
+        })    
+    </script>
 </body>
 </html>
